@@ -1,0 +1,39 @@
+<html>
+<title>JS Assignment 9</title>
+<script>
+
+    /*
+        Ref : Object this keyword
+
+        Question :  Create a calculator function calculator that creates objects with 3 methods.
+           -read() asks for two values using prompts and remembers them in object properties.
+           -sum() returns the sum of these properties
+           -mul() returns the multiplication product of these properties.
+    */
+
+    let calculator = {
+
+        //reads the value using prompt and stores in this
+        read() {
+            this.num1 = +prompt('Number-1');
+            this.num2 = +prompt('Number-2');
+        },
+        //this.num1 and this.num2 holds the values from prompt
+        sum() {
+            return this.num1 + this.num2;
+        },
+
+        mul() {
+            return this.num1 * this.num2;
+        }
+    };
+    //Read function is called
+    calculator.read();
+    //return value of sum function is displayed in alert
+    alert("Sum is :" + calculator.sum());
+    //return value of mul function is displayed in alert
+    alert("Product is :" + calculator.mul());
+
+</script>
+
+</html>

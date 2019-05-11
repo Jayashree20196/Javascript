@@ -1,0 +1,38 @@
+<html>
+<title>JS Assignment 6</title>
+
+<body>
+    <script>
+        /*
+            Question : Add a property to the following object so that the usage of the object works.
+
+            function makeUSer() {
+                return {
+                    name: "John"
+                }
+            }
+
+            let user = makeUser();
+            alert(user.ref.name);
+        */
+
+
+        //Adding a property to retun value
+        function makeUser() {
+            return {
+                name: "John",
+
+                //property to get the above value
+                ref() {
+                    return this;
+                }
+            };
+        };
+
+        let user = makeUser();
+        alert(user.ref().name);
+
+    </script>
+</body>
+
+</html>

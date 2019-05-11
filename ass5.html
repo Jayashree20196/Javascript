@@ -1,0 +1,31 @@
+<html>
+<title>
+    JS Assignment 5
+</title>
+
+<body>
+    <script>
+        /* Question
+            let user = {
+                name: "John"
+            };
+
+            alert(user); //toString -&gt John
+            alert(user+500); //toString -&gt John500
+        */
+
+        let user = {
+            name: "John",
+
+            //Primitive function that convert string
+            toString() {
+                return this.name;
+            }
+        };
+
+        alert(user);
+        alert(user + 500);
+    </script>
+</body>
+
+</html>

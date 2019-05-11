@@ -1,0 +1,45 @@
+<html>
+<title>JS Assignment 4</title>
+
+<body>
+    <script>
+        // Topic :  Conversions in Javascript
+
+        /* Question
+                 let user = {
+                     name: "John"
+                 };
+
+                 alert(user); //toString -&gt John
+                 alert(+user); //toString -&gt {name: "John"}
+                 alert(user+500); //toString -&gt John500
+             */
+
+
+        let user = {
+            name: "John",
+            money: 1000,
+
+            [Symbol.toPrimitive](hint) {
+                return hint == "string" ? `{name: "${this.name}"}` : this.money;
+            }
+
+            /*
+            toString() {
+               return `{name: "${this.name}"}`;
+             },
+
+             valueOf() {
+               return this.money;
+             }
+             */
+
+        };
+
+        alert(user); // toString -> {name: "John"}
+        alert(+user); // valueOf -> 1000
+        alert(user + 500);
+    </script>
+</body>
+
+</html>

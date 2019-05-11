@@ -1,0 +1,40 @@
+<html>
+<title>JS Assignment 11</title>
+<script>
+    /*
+        Ref : Arrays
+
+        Write the JS code to have the following series as output
+        Note: Use Arrays
+
+        Initial input 1 1 1 0 0 0 0
+        next output   0 1 1 1 0 0 0
+        next output   0 0 1 1 1 0 0
+        next output   . . . . .
+        next output   0 0 0 0 1 1 1
+        next output   1 0 0 0 0 1 1
+
+    */
+
+    function ArrayLoop(array) {
+        this.array = array;
+        var i = 0;
+
+        //calculates the length of the array
+        while (i < this.array.length) {
+
+            //pop method pops the last value of the array
+            let last_value = this.array.pop();
+
+            //unshift Inserts the value into the begining of the array
+            this.array.unshift(last_value);
+            alert(this.array);
+            i++;
+        }
+
+    }
+    let array = [1, 1, 1, 0, 0, 0, 0];
+    ArrayLoop(array);
+</script>
+
+</html>
