@@ -1,0 +1,27 @@
+<html>
+<title>
+    JS Assignment 15
+</title>
+
+<script>
+    /*
+        Question :  let arr = [5, 2, 1, -10, 8];
+                    alert( arr ); // 8, 5, 2, 1, -10
+
+    */
+
+    function sort(arr) {
+        /* sorting in reverse order.
+            In this case b - a returns
+            a negative number if b is smaller than a – so a will be sorted to the left of a
+            a positive number if b is bigger than a – so a will be sorted to the right of a
+            zero if they are equal – so it doesn’t matter which one comes first
+        */
+        alert(arr.sort((a, b) => b - a));
+    }
+
+    let arr = [5, 2, 1, -10, 8];
+    sort(arr);
+</script>
+
+</html>

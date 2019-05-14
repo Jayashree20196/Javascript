@@ -1,0 +1,43 @@
+<html>
+<title>
+    JS Assignment 20
+</title>
+
+<script>
+    /*
+        Question : Write the function sortByName(users) that gets an array of objects with property name and sorts it.
+
+        For instance:
+
+        let john = { name: "John", age: 25 };
+        let pete = { name: "Pete", age: 30 };
+        let mary = { name: "Mary", age: 28 };
+
+        let arr = [ john, pete, mary ];
+
+        sortByName(arr);
+
+        // now: [john, mary, pete]
+        alert(arr[1].name); // Mary
+    */
+
+    let john = { name: "John", age: 25 };
+    let pete = { name: "Pete", age: 30 };
+    let mary = { name: "Mary", age: 28 };
+
+    let arr = [john, pete, mary];
+
+    function sortByName(arr) {
+        return arr.sort(
+            //the return result of two name is positive or negative value.
+            //If positive value then moves right, else it moves left of array
+            (a, b) => a.name > b.name ? 1 : -1
+        );
+    }
+
+    sortByName(arr);
+    alert(arr[1].name);
+
+</script>
+
+</html>
