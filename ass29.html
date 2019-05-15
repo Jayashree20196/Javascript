@@ -1,0 +1,30 @@
+<html>
+<title>
+    JS Assignment 29
+</title>
+<script>
+    /*
+        Question : Write a function getSecondsToday() that returns the number of seconds from the beginning of today.
+
+        For instance, if now 10:00 am, and there was no daylight savings shift, then:
+
+        getSecondsToday() == 36000 // (3600 * 10)
+        The function should work in any day. That is, it should not have a hard-coded value of “today”.
+
+    */
+
+    function getSecondsToday() {
+        //gets todays date
+        var today = new Date();
+        //getHours : gets hours
+        //getMinutes: get the number of minutes
+        //getSeconds: gets the number of seconds.
+        //converts hrs and mins into seconds.
+        var time = today.getHours() * 3600 + today.getMinutes() * 60 + today.getSeconds();
+        return time;
+    }
+    alert(getSecondsToday());
+
+</script>
+
+</html>

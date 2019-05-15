@@ -1,0 +1,46 @@
+<html>
+<title>
+    JS Assignment 39
+</title>
+<script>
+    /*
+        Question:  There’s an array of messages as in the previous task. The situation is similar.
+
+        let messages = [
+        {text: "Hello", from: "John"},
+        {text: "How goes?", from: "John"},
+        {text: "See you soon", from: "Alice"}
+        ];
+        The question now is: which data structure you’d suggest to store the information: “when the message was read?”.
+
+        In the previous task we only needed to store the “yes/no” fact. Now we need to store the date and it,
+        once again, should disappear if the message is gone.
+    */
+
+    let messages = [
+        { text: "Hello", from: "John" },
+        { text: "How goes?", from: "John" },
+        { text: "See you soon", from: "Alice" }
+    ];
+
+    let readMessages = new WeakSet();
+
+    // two messages have been read
+    readMessages.add(messages[0]);
+    readMessages.add(messages[1]);
+    // readMessages has 2 elements
+
+    // ...let's read the first message again!
+    readMessages.add(messages[0]);
+    // readMessages still has 2 unique elements
+
+    // answer: was the message[0] read?
+    alert("Read message 0: " + readMessages.has(messages[0])); // true
+
+    messages.shift();
+//
+
+
+</script>
+
+</html>

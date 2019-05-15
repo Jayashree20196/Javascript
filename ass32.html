@@ -1,0 +1,23 @@
+<html>
+<title>
+    JS Assignment 32
+</title>
+<script>
+    /*
+        Question: Write a function ucFirst(str) that returns the string str with the uppercased first character, for instance:
+
+        E.g.:
+        ucFirst("john") == "John";
+    */
+
+    function ucFirst(str) {
+        //CharAt : takes the first character at 0th index and returns a string
+        //slice : cuts out the first letter
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+    ucFirst("john") == "John";
+
+    alert(ucFirst("jayashree"))
+</script>
+
+</html>

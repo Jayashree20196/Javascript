@@ -1,0 +1,45 @@
+<html>
+<title>
+    Javascript Assignment 23
+</title>
+
+<body>
+    <script>
+        /*
+            Question :  There is a salaries object:
+
+            let salaries = {
+            "John": 100,
+            "Pete": 300,
+            "Mary": 250
+            };
+            Create the function topSalary(salaries) that returns the name of the top-paid person.
+
+            If salaries is empty, it should return null.
+            If there are multiple top-paid persons, return any of them.
+        */
+
+        function topSalary(salaries) {
+            //checking the object has property by using ECMA 5. it checks the length of number of keys.
+            if (Object.keys(salaries).length === 0) {
+                return null;
+            } else {
+                //checks for the key that has high values and returns their value.
+                return Object.keys(salaries).reduce((a, b) => salaries[a] > salaries[b] ? a : b);
+            }
+
+        }
+
+        //Object
+        let salaries = {
+            "John": 100,
+            "Pete": 300,
+            "Mary": 250
+        };
+
+        let high_value = topSalary(salaries);
+        alert(high_value);
+    </script>
+</body>
+
+</html>

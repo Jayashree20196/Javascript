@@ -1,0 +1,32 @@
+<html>
+<title>
+    JS Assignment 33
+</title>
+<script>
+    /*
+        Question: Write a function checkSpam(str) that returns true if str contains ‘viagra’ or ‘XXX’, otherwise `false.
+
+        The function must be case-insensitive:
+
+        checkSpam('buy ViAgRA now') == true
+        checkSpam('free xxxxx') == true
+        checkSpam("innocent rabbit") == false
+    */
+
+    function checkSpam(str) {
+        //converts the string into lowercase
+        str = str.toLowerCase();
+        //checks whether the substring is present in the given string.
+        if (str.includes("viagra") || str.includes("xxx")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    alert(checkSpam('buy ViAgRA now')); //true
+    alert(checkSpam('free xxxxx')); //true
+    alert(checkSpam("innocent rabbit")); //false
+</script>
+
+</html>

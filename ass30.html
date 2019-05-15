@@ -1,0 +1,27 @@
+<html>
+<title>
+    JS Assignment 30
+</title>
+<script>
+    /*
+        Question : Create a function getSecondsToTomorrow() that returns the number of seconds till tomorrow.
+
+        For instance, if now is 23:00, then:
+
+        getSecondsToTomorrow() == 3600
+        P.S. The function should work at any day, the “today” is not hardcoded.
+    */
+
+    function getSecondsToTomorrow() {
+        //get todays date
+        let today = new Date();
+        //Calculate seconds per day
+        let seconds_perDay = 24 * 3600;
+        //calculate the finished seconds of today
+        let todays_seconds = today.getHours() * 3600 + today.getMinutes() * 60 + today.getSeconds();
+        return seconds_perDay - todays_seconds;
+    }
+    alert(getSecondsToTomorrow());
+</script>
+
+</html>

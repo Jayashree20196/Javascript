@@ -1,0 +1,28 @@
+<html>
+<title>
+    JS Assignment 25
+</title>
+
+<script>
+    /*
+        Question: Write a function getWeekDay(date) to show the weekday in short format: ‘MO’, ‘TU’, ‘WE’, ‘TH’, ‘FR’, ‘SA’, ‘SU’.
+
+        For instance:
+
+        let date = new Date(2012, 0, 3);  // 3 Jan 2012
+        alert( getWeekDay(date) );        // should output "TU"
+    */
+
+
+    function getWeekDay(date) {
+        let days = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'];
+        //getDay is the js function to the day of day in above declared days format.
+        //date.getDay() returns 5. It checks the 5 value in days array
+        return days[date.getDay()];
+    }
+
+    let date = new Date(1996, 0, 20); // 20 Jan 1996
+    alert(getWeekDay(date)); // SA
+</script>
+
+</html>

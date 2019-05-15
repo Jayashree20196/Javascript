@@ -1,0 +1,30 @@
+<html>
+<title>
+    JS Assignment 24
+</title>
+
+<script>
+    /*
+        Question : Create a function randomInteger(min, max) that generates a random integer number from min to max including both min and max as possible values.
+
+        Any number from the interval min..max must appear with the same probability.
+
+        Examples of its work:
+
+        alert( random(1, 5) ); // 1
+        alert( random(1, 5) ); // 3
+        alert( random(1, 5) ); // 5
+    */
+
+    function random(min, max) {
+        //Floor just round of the values.
+        //random generates a random integer
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    alert(random(1, 5)); // 1
+    alert(random(1, 5)); // 3
+    alert(random(1, 5)); // 5
+</script>
+
+</html>

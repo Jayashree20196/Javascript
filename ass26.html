@@ -1,0 +1,30 @@
+<html>
+<title>
+    JS Assignment 26
+</title>
+<script>
+    /*
+        Question : European countries have days of week starting with Monday (number 1), then Tuesday (number 2) and till Sunday (number 7).
+        Write a function getLocalDay(date) that returns the “European” day of week for date.
+
+        let date = new Date(2012, 0, 3);  // 3 Jan 2012
+        alert( getLocalDay(date));       // tuesday, should show 2
+
+    */
+
+    function getLocalDay(date) {
+        //Checks the day and returns the number
+        let day = date.getDay();
+        //loops if the day is 0 i.e sunday, then it is  set to the last.
+        if (day == 0) {
+            day = 7;
+        }
+        return day;
+    }
+
+    let date = new Date(1996, 0, 22);  // 22 Jan 996
+    alert(getLocalDay(date));       // Monday, should show 1
+
+</script>
+
+</html>

@@ -1,0 +1,42 @@
+<html>
+<title>
+    JS Assignment 36
+</title>
+<script>
+    /*
+        Question: Let arr be an array.
+
+        Create a function unique(arr) that should return an array with unique items of arr.
+
+        For instance:
+
+        function unique(arr) {
+        ... your code
+        }
+
+        let values = ["Hare", "Krishna", "Hare", "Krishna",
+            "Krishna", "Krishna", "Hare", "Hare", ":-O"
+        ];
+
+        alert(unique(values)); // Hare, Krishna, :-O
+        P.S.Here strings are used, but can be values of any type.
+    */
+
+    function unique(arr) {
+        // ES6 standards to get the unique values using index value, returns true if unique else false
+        let unique = (value, index, self) => {
+            return self.indexOf(value) === index;
+        }
+        //filters only true values
+        return values.filter(unique);
+    }
+
+    let values = ["Hare", "Krishna", "Hare", "Krishna",
+        "Krishna", "Krishna", "Hare", "Hare", ":-O"
+    ];
+
+    alert(unique(values));
+
+</script>
+
+</html>

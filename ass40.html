@@ -1,0 +1,33 @@
+<html>
+<title>
+    JS Assignment 40
+</title>
+<script>
+    /*
+        Question: Write a function getSecondLargest(nums).
+        It has one parameter: an array, nums, of n numbers. The function must find and return the second largest number in nums.
+
+        nums = [2, 3, 6, 6, 5];
+        Output: 5
+    */
+
+    function getSecondLargest(nums) {
+        //Filter the duplicates from the array
+        let unique = (value, index, self) => {
+            return self.indexOf(value) === index;
+        }
+        let filtered_array = nums.filter(unique);
+
+        //from the filtered array find the max value
+        var max = Math.max.apply(null, filtered_array);
+        // remove max from the array
+        filtered_array.splice(filtered_array.indexOf(max), 1);
+        //again find the max value in the remaining array
+        return Math.max.apply(null, filtered_array);
+    }
+    let nums = [2, 3, 6, 6, 5];
+    alert(getSecondLargest(nums))
+
+</script>
+
+</html>

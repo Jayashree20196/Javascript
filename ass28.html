@@ -1,0 +1,28 @@
+<html>
+<title>
+    JS Assignment 28
+</title>
+<script>
+    /*
+        Question: Write a function getLastDayOfMonth(year, month) that returns the last day of month.
+        Sometimes it is 30th, 31st or even 28/29th for Feb.
+
+        Parameters:
+
+        year – four-digits year, for instance 2012.
+        month – month, from 0 to 11.
+        For instance, getLastDayOfMonth(2012, 1) = 29 (leap year, Feb).
+    */
+    function getLastDayOfMonth(year, month) {
+        //new Date maps the year and month in the date format.
+        //month isadded +1 since , in date format the value of january month is 0. So by 1 it starts with value 1
+        let date = new Date(year, month + 1, 0);
+        //returns the days.
+        return date.getDate();
+    }
+    let last_date = getLastDayOfMonth(2012, 1); // 29 (leap year, Feb)
+    alert(last_date);
+
+</script>
+
+</html>
