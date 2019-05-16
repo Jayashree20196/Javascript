@@ -1,0 +1,27 @@
+<html>
+<title>
+    JS Assignment 41
+</title>
+<script>
+    /*
+        Question:  let room = {
+        guest: "SpanIdea"
+        };
+
+        Modify the above object to have the following output:
+        Expected output:
+
+        alert( JSON.stringify(room) ); //SpanIdea
+    */
+
+    let room = {
+        guest: "SpanIdea"
+    };
+
+    room = Object.values(room);
+
+    alert(JSON.stringify(room));
+
+</script>
+
+</html>

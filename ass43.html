@@ -1,0 +1,56 @@
+<html>
+<title>
+    JS Assignment 43
+</title>
+<script>
+    /*
+        Question:       1.	Create an array styles with items “Jazz” and “Blues”.
+                        2.	Append “Rock-n-Roll” to the end.
+                        3.	Replace the value in the middle by “Classics”. Your code for finding the middle value should work for any arrays with odd length.
+                        4.	Strip off the first value of the array and show it.
+                        5.	Prepend Rap and Reggae to the array.
+
+                        The array in the process:
+
+                        Jazz, Blues
+                        Jazz, Bues, Rock-n-Roll
+                        Jazz, Classics, Rock-n-Roll
+                        Classics, Rock-n-Roll
+                        Rap, Reggae, Classics, Rock-n-Roll
+
+    */
+
+
+    styles_fun = (styles) => {
+        let add_new = "Rock-n - Roll";
+        //append new value into the array
+        styles.push(add_new);
+        console.log("2-->", styles);
+
+        //finding the middle value.
+        var middle = styles[Math.floor(styles.length / 2)];
+        //finding the index value of middle value
+        var index = styles.indexOf(middle);
+        //replacing the middle value with given string
+        if (index !== -1) {
+            styles[index] = "Classics";
+        }
+        console.log("3-->", styles)
+
+        //slice the first value
+        styles = styles.slice(1);
+        console.log("4 -->", styles)
+
+        //adds values to the start
+        styles.unshift("Rap", "Reggae");
+        console.log("5 -->", styles)
+    }
+
+    let styles = ["Jazz", "Blues"];
+    styles_fun(styles);
+
+
+
+</script>
+
+</html>
