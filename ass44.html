@@ -1,0 +1,41 @@
+<html>
+<title>
+    JS Assignment 44
+</title>
+<script>
+    /*
+        Question: Write the function sumInput() that:
+
+        Asks the user for values using prompt and stores the values in the array.
+        Finishes asking when the user enters a non-numeric value, an empty string, or presses “Cancel”.
+        Calculates and returns the sum of array items.
+        P.S. A zero 0 is a valid number, please don’t stop the input on zero.
+    */
+
+
+    function sumInput() {
+        //Initializing empty array
+        let numbers = [];
+        //check if the value is true, initially the value will be true
+        while (true) {
+            //prompts and gets the value
+            let value = prompt("A number please?", 0);
+
+            // should we cancel?
+            // checks if the number is finite and returns true if yes
+            if (value === "" || value === null || !isFinite(value)) break;
+            numbers.push(+value);
+        }
+
+        let sum = 0;
+        //sums up the value
+        for (let number of numbers) {
+            sum += number;
+        }
+        return sum;
+    }
+
+    alert(sumInput());
+</script>
+
+</html>
