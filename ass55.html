@@ -27,6 +27,16 @@
         alert(a + b); // work is an arbitrary function or method
     }
 
+    function spy(func) {
+        //spread operator with arguments is passed.
+        function wrapper(...args) {
+            //pushed the arguments
+            wrapper.calls.push(args);
+            return func.apply(this, arguments);
+        }
+        wrapper.calls = [];
+        return wrapper;
+    }
     work = spy(work);
 
     work(1, 2); // 3
@@ -35,6 +45,6 @@
     for (let args of work.calls) {
         alert('call:' + args.join()); // "call:1,2", "call:4,5"
     }
-</script>
+</script>ss
 
 </html>

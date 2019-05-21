@@ -1,0 +1,38 @@
+<html>
+<title>
+    Js Assignment 62
+</title>
+<script>
+    /*
+        Question: Use closures to create a function to implement a counter.
+
+        let counter = makeCounter();
+        let counter2 = makeCounter();
+
+        alert( counter() );
+        alert( counter() );
+
+        alert( counter2() );
+        alert( counter2() );
+
+        Above mentioned variables counter and counter2 should be independent variables.
+
+    */
+    function makeCounter() {
+        let count = 0;
+
+        return function () {
+            return count++;
+        };
+    }
+    let counter = makeCounter();
+    let counter2 = makeCounter();
+
+    alert(counter());
+    alert(counter());
+
+    alert(counter2());
+    alert(counter2());
+</script>
+
+</html>

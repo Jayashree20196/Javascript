@@ -1,0 +1,28 @@
+<html>
+<title>
+    JS Assignment 59
+</title>
+<script>
+    /*
+        Question:
+
+        Find all the ways in which one can merge the following arrays:
+
+        let arr1 = [4,22,54,-52, 36,105];
+        let arr2 = [84,45,65,98,52,14,70];
+        let arr3 = [55,65,32,65,98,45,52,25];
+    */
+
+    function SpreadOperator(arr1, arr2, arr3) {
+        //using concat method, can combine multiple arrays into single array
+        return arr1.concat(arr2, arr3)
+    }
+
+    let arr1 = [4, 22, 54, -52, 36, 105];
+    let arr2 = [84, 45, 65, 98, 52, 14, 70];
+    let arr3 = [55, 65, 32, 65, 98, 45, 52, 25];
+
+    console.log(SpreadOperator(arr1, arr2, arr3));
+</script>
+
+</html>

@@ -1,0 +1,28 @@
+<html>
+<title>
+    JS Assignment 67
+</title>
+<script>
+    /*
+        Question: Write a function printNumbers(from, to) that outputs a number every second, starting from from and ending with to.
+
+        Make two variants of the solution.
+
+        1. Using setInterval.
+        2. Using recursive setTimeout.
+    */
+
+    function printNumbers(from, to) {
+        for (var i = from; i <= to; i++) {
+            let numbers = setInterval(num(i), 3000)
+        }
+    }
+    function num(from) {
+        alert(from)
+    }
+
+    printNumbers(1, 5)
+
+</script>
+
+</html>
