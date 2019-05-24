@@ -1,0 +1,61 @@
+<html>
+<title>
+    JS Assignnment 74
+</title>
+<script>
+    /*
+        Questions : The task has two parts.
+
+        We have an object:
+
+        let head = {
+        glasses: 1
+        };
+
+        let table = {
+        pen: 3
+        };
+
+        let bed = {
+        sheet: 1,
+        pillow: 2
+        };
+
+        let pockets = {
+        money: 2000
+        };
+
+        1. Use __proto__ to assign prototypes in a way that any property lookup will follow the path: pockets ? bed ? table ? head.
+        For instance, pockets.pen should be 3 (found in table), and bed.glasses should be 1 (found in head).
+        2. Answer the question: is it faster to get glasses as pockets.glasses or head.glasses? Benchmark if needed.
+
+    */
+    let head = {
+        glasses: 1
+    };
+
+    let table = {
+        //inherits head object
+        __proto__: head,
+        pen: 3
+    };
+
+    let bed = {
+        //inherits table object
+        __proto__: table,
+        sheet: 1,
+        pillow: 2
+    };
+
+    let pockets = {
+        //inherits the bed object
+        __proto__: bed,
+        money: 2000
+    };
+    //prints the value inside pen
+    alert(pockets.pen); // 3
+    alert(bed.glasses); // 1
+    alert(table.money); //undefined
+</script>
+
+</html>
